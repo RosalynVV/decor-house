@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --orange: #fcac33;
+    --black: #130f40;
+    --red: #e01a3c;
+    --green: #03a69e;
+}
+
+/* Esto es el form-box */
+.header .login-form {
+    position: absolute;
+    top: 110%;
+    right: -100%;
+    height: 150px;
+    width: 30rem;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    border-radius: 10px;
+    background: #fdfdfd;
+    background-position: center;
+    overflow: hidden;
+    
+
+}
+
+.header .login-form.active {
+    right: 2rem;
+    transition: .1s linear;
+}
+
+.container-login 
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+a.nav-link {
+    font-size: 10px;
+    margin-top: 20px;
+}

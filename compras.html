@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Decor House</title>
+  <link rel="icon" href="./LogoDH/LogoOficial.ico">
+
+
+  <link rel="stylesheet" href="./css/login.css">
+  <link rel="stylesheet" href="./css/confirmacion.css">
+  <link rel="stylesheet" href="./css/estiloTienda.css">
+  <link rel="stylesheet" href="./css/EstiloHeader.css">
+  <link rel="stylesheet" href="./css/tiendaFoter.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <link rel="stylesheet" href="./css/compras.css">
+  <script src="./js/tienda.js"></script>
+
+  <!-- link de alertas -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.all.min.js"></script>
+
+  <!-- link de los correo -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <script type="text/javascript">
+    emailjs.init('qSjs7KWmrDzYHzpiO')
+  </script>
+</head>
+
+<body>
+  <header class="header ">
+    <a href="index.html#" class="Logo">
+      <img src="./LogoDH/LogoOficial.png">
+    </a>
+    <nav class="navbar ">
+      <a href="index.html" style="--i:1;" class="active">Inicio</a>
+      <a href="Tienda.html#shop" style="--i:2;">Tienda</a>
+      <a href="index.html#servicios" style="--i:3;">Servicios</a>
+      <a href="index.html#blogs" style="--i:4;">Blog</a>
+      <a href="index.html#nosotros" style="--i:5;">Nosotros</a>
+      <a href="index.html#equipo" style="--i:6;">Equipo</a>
+      <a href="#footer" style="--i:7;">Contactos</a>
+    </nav>
+    <div class="icons">
+      <div class="fas fa-search" id="search-btn"></div>
+      <div class="fa-solid fa-cart-shopping" id="cart-btn">
+        <span class="count-product">0</span>
+      </div>
+      <div class="fas fa-user" id="login-btn"></div>
+      <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+
+    <form action="" class="search-form">
+      <input type="search" id="search" placeholder="search here...">
+      <label for="search-box" id="search-icon" class="fas fa-search"></label>
+    </form>
+    <!--Inicio del carrito de Compras -->
+    <div class="shopping-cart" id="shopping-cart">
+      <a class="close-btn" onclick="closeBtn()"><i class="far fa-times-circle"></i></a>
+      <div class="header-carrito">
+        <h2>Tu Carrito</h2>
+      </div>
+      <div class="card-items">
+        <!-- aqui se agregara con el javaScript -->
+      </div>
+      <h2>Total: <strong class="price-total">0.00</strong></h2>
+      <a href="/" class="btn" id="procesarCompra">Seguir comprando</a>
+    </div>
+    <!--Fin del carrito de Compras -->
+    
+     <!--LOGIN -->
+     <div action="" class="login-form">
+      <div class="container-login">
+        <h3 class="title-header-login" style="color: rgb(27, 138, 183);">
+          ----- Cliente -----
+        </h3>
+    
+        <div class="use-name">
+          <p class="nav-link" style="color: #2c3e53 !important;">
+            <strong style="font-size: 13px;">Nombre de Usuario:</strong> <span id="user-name"></span>
+          </p>
+        </div>
+    
+        <br>
+        <div class="user-logout">
+          <a href="#" class="nav-link">
+            <i class="fas fa-door-open" id="cerrar-sesion" style="color: orange; font-size: 16px;"></i>
+          </a>
+        </div>
+        <br>
+        <p class="explanation" style="font-size: 10px; color: rgb(27, 138, 183);">
+          Si sale como "Invitado" ¡Usted no está logeado!
+        </p>
+      </div>
+  </header>
+  <h1>Detalles de Compras</h1>
+
+  <h2>Datos del Cliente</h2>
+  <div class="container">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" placeholder="Ingrese su nombre">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Ingrese su email">
+  </div>
+
+  <h2>Productos Agregados</h2>
+  <div class="table-content">
+    <table class="carrito-table" id="carrito-table">
+      <thead>
+        <tr>
+          <th>Imagen</th>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody> 
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4" class="total">Total:</td>
+          <td id="total">0.00</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+
+  <div class="goup-botom">
+    <a href="Tienda.html" id="seguir-comprando" class="btn">Seguir Comprando</a>
+    <button id="finalizar-pagar" class="btn">Realizar Pedido</button>
+  </div>
+
+  <section class="footer" id="footer">
+    <div class="box-container">
+      <div class="box-content">
+
+        <img src="/LogoDH/LogoOficial.png" alt="">
+
+        <p> Gracias por prefirnos, estamos contentos de poder tener clientes como uds.
+          disfrute de cada compra y experiencia unica, y tambien nos puedes seguir en nuestras redes sociales.
+        </p>
+        <div class="share">
+          <a href="#" class="fab fa-facebook-f"></a>
+          <a href="#" class="fab fa-twitter"></a>
+          <a href="#" class="fab fa-instagram"></a>
+          <a href="#" class="fab fa-linkedin"></a>
+        </div>
+      </div>
+      <div class="box-content">
+        <h3>Informacion de Contactos </i></h3>
+        <a href="#" class="links"> <i class="fas fa-phone"></i> +51 987546548</a>
+        <a href="#" class="links"> <i class="fas fa-envelope"></i> decorhouseshop@gmail.com</a>
+        <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i> numbai, tarapoto 4251</a>
+      </div>
+
+      <div class="box-content">
+        <h3>enlaces rápidos</h3>
+        <a href="index.html" class="links"> <i class="fas fa-arrow-right"></i> Inicio</a>
+        <a href="Tienda.html" class="links"> <i class="fas fa-arrow-right"></i> Tienda</a>
+        <a href="index.html#servicios" class="links"> <i class="fas fa-arrow-right"></i> Servicios</a>
+        <a href="index.html#blogs" class="links"> <i class="fas fa-arrow-right"></i> Blog</a>
+        <a href="index.html#nosotros" class="links"> <i class="fas fa-arrow-right"></i> Nosotros</a>
+        <a href="index.html#equipo" class="links"> <i class="fas fa-arrow-right"></i> Equipo</a>
+        <a href="#footer" class="links"> <i class="fas fa-arrow-right"></i> Contactos</a>
+      </div>
+
+      <div class="box-content">
+        <h3>Boletín Informativos </h3>
+        <p>Ingrese su correo para recibir recibir las nuevas actualizaciones</p>
+        <input type="email" placeholder="your email" class="email">
+        <input type="Submit" value="Enviar" class="btn">
+      </div>
+
+    </div>
+    <div class="credit">| @ Decor House</div>
+  </section>
+
+
+  <script src="./js/confirmacion.js"></script>
+  <script src="./js/Script.js"></script>
+  <script src="./js/tienda.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const cerrarSesionBtn = document.getElementById("cerrar-sesion");
+        const userNameElement = document.getElementById("user-name");
+        const userDataString = localStorage.getItem("user");
+    
+        // Campos para autocompletar
+        const inputNombre = document.getElementById("nombre");
+        const inputEmail = document.getElementById("email");
+    
+        if (userDataString) {
+          try {
+            const user = JSON.parse(userDataString);
+            userNameElement.textContent = user.username || "Invitado";
+    
+            // Autocompletar inputs
+            if (inputNombre) {
+              const nombreCompleto = `${user.name || ""} ${user.apellidos || ""}`.trim();
+              inputNombre.value = nombreCompleto || "";
+            }
+    
+            if (inputEmail) {
+              inputEmail.value = user.email || "";
+            }
+          } catch (error) {
+            console.error("Error al parsear user:", error);
+            userNameElement.textContent = "Invitado";
+    
+            // Mensaje si falla el parseo
+            if (inputNombre) {
+              inputNombre.placeholder = "No hay datos, por favor logéate o completa tu nombre";
+            }
+          }
+        } else {
+          userNameElement.textContent = "Invitado";
+    
+          if (inputNombre) {
+            inputNombre.placeholder = "No hay datos, por favor logéate o completa tu nombre";
+          }
+    
+          if (inputEmail) {
+            inputEmail.placeholder = "No hay email disponible";
+          }
+        }
+    
+        cerrarSesionBtn.addEventListener("click", function (event) {
+          event.preventDefault();
+    
+          if (!userDataString) {
+            Swal.fire({
+              title: "No hay usuario logueado",
+              text: "¿Deseas ir a la página de inicio de sesión?",
+              icon: "warning",
+              showCancelButton: true,
+              confirmButtonText: "Sí, ir al login",
+              cancelButtonText: "No",
+            }).then((result) => {
+              if (result.isConfirmed) {
+                window.location.href = "./login.html";
+              }
+            });
+          } else {
+            Swal.fire({
+              title: "¿Cerrar sesión?",
+              text: "Hay un usuario logueado. ¿Deseas cerrar sesión?",
+              icon: "question",
+              showCancelButton: true,
+              confirmButtonText: "Sí",
+              cancelButtonText: "No",
+            }).then((result) => {
+              if (result.isConfirmed) {
+                localStorage.removeItem("user");
+                Swal.fire({
+                  title: "Sesión cerrada",
+                  text: "Has cerrado sesión exitosamente",
+                  icon: "success",
+                  confirmButtonText: "OK",
+                }).then(() => {
+                  window.location.href = "./login.html";
+                });
+              }
+            });
+          }
+        });
+      });
+    </script>
+    
+</body>
+
+</html>

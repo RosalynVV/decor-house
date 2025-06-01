@@ -1,0 +1,151 @@
+:root {
+    --orange: #fcac33;
+    --black: #130f40;
+    --red: #e01a3c;
+    --green: #03a69e;
+    --whatsapp:#00e676;
+
+    --ligtht-color:gray;
+    --box-shadow: .5rem 1rem rgba(0,0,0,.1);
+    --border: .2rem solid rgba(0,0,0,.1);
+    --outline: .2rem solid var(--black);
+}
+
+
+.blog-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    
+}
+
+.blog-heading h2{
+    font-size: 2.4rem;
+    color: #e01a3c;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+.btn-whatsapp {
+    position: fixed;
+    bottom: 1%;
+    left: 92%;
+    transform: translate(50%, -50%);
+    font-size: 38px;
+    color: wheat;
+    text-align: center;
+    z-index: 1000000;
+}
+
+.btn-whatsapp:before,
+.btn-whatsapp::after{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: -4px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--whatsapp);
+    opacity: 0;
+    animation: onda 1.7s infinite;
+    
+}
+.btn-whatsapp i{
+    position: relative;
+    z-index: 200000;
+}
+
+.btn-whatsapp::before{
+    animation-delay:1s ;
+}
+.btn-whatsapp::after{
+    animation-delay: 1.3s;
+}
+/* estilos del contendor */
+
+
+.box .detalles-servicio  li {
+    font-weight: bolder;
+    text-transform: none;
+    color: var(--green);
+    text-align: justify;
+    font-size: 14px;
+    animation: slide-down 0.5s forwards;
+}
+.blogs .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    gap: 1.5rem;
+    padding: 10px;
+    text-align: center;
+    margin: 0 auto;    
+}
+.blogs .box-container .box{
+    overflow: hidden;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    background: #fff;
+    width: 30rem;
+    margin: 2rem ;
+    height: 50rem;
+}
+.blogs .box-container .box img{
+    height: 20rem;
+    width: 100%;
+    object-fit: cover; 
+}
+.blogs .box-container .box .content{
+    padding: 2rem;
+}
+.blogs .box-container .box .content .icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: var(--border);
+}
+.blogs .box-container .box .content .icons a{
+    color: var(--ligtht-color);
+    font-size: 1.5rem;
+}
+.blogs .box-container .box .content .icons a:hover{
+    color: var(--red);
+}
+.blogs .box-container .box .content .icons a i{
+    color: var(--orange);
+    padding-right: .5rem;
+}
+.blogs .box-container .box .content h3{
+    line-height: 1.8;
+    color: var(--red);
+    font-size: 1.7rem;
+    padding: .1rem 0;
+    text-align: center;
+}
+.blogs .box-container .box .content p{
+    line-height: 1.8;
+    text-transform: none;
+    color: var(--black);
+    font-size: 1.5rem;
+    text-align: center;
+    padding: .5rem 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+@keyframes onda {
+    0%{
+        transform: scale(1);
+    }
+    15%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: scale(2.5);
+    }
+}

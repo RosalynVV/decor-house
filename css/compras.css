@@ -1,0 +1,275 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+:root {
+  --orange: #fcac33;
+  --black: #130f40;
+  --red: #e01a3c;
+  --green: #03a69e;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding-bottom: 20px;
+}
+
+h1 {
+  padding-top: 60px;
+  text-align: center;
+  color: var(--red);
+  font-size: 3rem;
+}
+
+h2 {
+  margin-top: 30px;
+  text-align: center;
+  color: #555;
+  font-size: 2rem;
+  text-transform: none;
+}
+
+.container {
+  justify-content: center;
+  margin: 5px auto;
+  align-items: center;
+  display: flex;
+  width: 70%;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 1.3rem;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container label {
+  margin: 10px;
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+  font-size: 1.5rem;
+}
+
+#nombre,
+#email {
+  width: 50%;
+  padding: 8px;
+  margin-bottom: 0px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  justify-content: center;
+  cursor: pointer;
+  text-transform: none;
+  transition: border-color 0.2s linear;
+}
+
+#nombre:hover,
+#email:hover {
+  border-color: #4CAF50;
+}
+
+.table-content {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+  margin: 15px;
+  color: var(--black);
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #6b6565;
+}
+
+th {
+  background-color: #333;
+  color:var(--green);
+  border: 10px;
+}
+
+tfoot td {
+  font-weight: bold;
+  color: var(--green);
+  font-size: 2rem;
+  text-align: center;
+
+}
+.total{
+  text-align: end;
+  font-size: 2rem;
+}
+.goup-botom {
+  display: flex;
+  justify-content: end;
+  margin: 50px 0;
+}
+
+
+.btn {
+  margin-top: 1rem;
+  display: flex;
+  padding: .8rem 3rem;
+  font-size: 1.7rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  margin: 10px;
+  text-align: center;
+  text-transform: none;
+  /* transition: 0.5s; */
+  background-size: 200% auto;
+  box-shadow: 0 0 20px #eee;
+
+  background-color: transparent;
+  /* transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1); */
+  transition: color 0.3s 0.1s ease-out;
+  position: relative;
+
+  align-items: center;
+  font-weight: 600;
+  text-decoration: none;
+  border: .2rem solid var(--red);
+  outline: none;
+  overflow: hidden;
+  color: var(--red);
+
+
+
+
+}
+
+.btn::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  content: '';
+  border-radius: 50%;
+  display: block;
+  width: 20em;
+  height: 20em;
+  left: -5em;
+  text-align: center;
+  transition: box-shadow 0.5s ease-out;
+  z-index: -1;
+}
+
+.btn:active {
+  box-shadow: 0 0 10px var(--red);
+}
+
+.btn:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  text-decoration: none;
+
+  border-color: var(--red);
+  box-shadow: 0 0 15px var(--red);
+
+  color: #fff;
+  border: 1px solid var(--red);
+  background: var(--red);
+
+}
+
+.btn:hover::before {
+  box-shadow: inset 0 0 0 10em var(--red);
+}
+
+
+
+/* Estilos para dispositivos móviles */
+
+@media(max-width: 768px) {
+  body {
+    padding: 10px;
+  } 
+  .table-content{
+    width: 60rem;
+    justify-content: flex-start;
+  }
+  .table-content .carrito-table {
+    width: 50rem;
+    justify-content:20rem;
+  }
+  .container {
+    justify-content: center;
+    margin: 5px auto;
+    align-items: center;
+    display: block;
+    width: 80%;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    font-size: 1.3rem;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  #nombre,
+  #email {
+    width: 100%;
+  }
+  
+  table {
+    font-size: 1.7rem;
+  }
+  
+  h1 {
+    font-size: 3rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  .btn {
+    font-size: 1.2rem;
+    padding: 0.5rem 
+  }
+}
+
+/* Ajustes adicionales para dispositivos móviles */
+
+@media (max-width: 480px) {
+  .table-content{
+    width: 40rem;
+    justify-content: flex-start;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  .btn {
+    font-size: .9rem;
+    padding: 0.3rem ;
+  }
+}
+

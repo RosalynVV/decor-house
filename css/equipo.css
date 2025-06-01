@@ -1,0 +1,239 @@
+:root {
+    --orange: #fcac33;
+    --black: #130f40;
+    --red: #e01a3c;
+    --green: #03a69e;
+    --whatsapp: #00e676;
+
+    --ligtht-color: gray;
+    --box-shadow: .5rem 1rem rgba(0, 0, 0, .1);
+    --border: .2rem solid rgba(0, 0, 0, .1);
+    --outline: .2rem solid var(--black);
+}
+
+/* Estilo Nosotros */
+.nosotros {
+    text-align: center;
+    width: 100%;
+}
+
+.nosotros .heading {
+    margin-top: -2rem;
+    margin-bottom: 2rem;
+}
+
+.box-nosotros {
+    width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+    display: grid;
+    margin-top: -40px;
+}
+
+.contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: end;
+    padding: 20px;
+}
+
+.container>div {
+    flex: 1 1 300px;
+    max-width: 100%;
+    margin: 10px;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.somos {
+    display: flex;
+}
+
+.somos .description {
+    display: flex;
+    width: 45rem;
+    margin: 15px;
+    padding: 10px;
+    flex-direction: column;
+
+}
+
+.somos .description h2 {
+    font-size: 2.5rem;
+    color: var(--red);
+    font-family: 'roboto', sans-serif;
+}
+
+.somos .description p {
+    font-size: 1.5rem;
+    font-family: 'roboto', sans-serif;
+    text-transform: none;
+}
+
+.imagen img {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.vision-container,
+.mision-container,
+.objetivo-container {
+    width: 35rem;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 12px;
+}
+
+.vision-container h2,
+.mision-container h2,
+.objetivo-container h2 {
+    font-size: 2rem;
+    color: var(--green);
+    font-weight: bold;
+    text-transform: none;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.vision-container p,
+.mision-container p,
+.objetivo-container p {
+    font-size: 1.4rem;
+    text-transform: none;
+
+    font-family: 'roboto', Arial, Helvetica, sans-serif;
+}
+
+
+/* Estilo Equipos */
+.equipo .equipo-slider {
+    padding: 1rem;
+}
+
+.equipo .equipo-slider .box {
+    background: #fff;
+    border-radius: .5rem;
+    text-align: center;
+    padding: 3rem 2rem;
+    outline-offset: -1rem;
+    transition: .2s linear;
+    border: 1px solid var(--ligtht-color);
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+
+
+}
+
+.equipo .equipo-slider .box:hover {
+
+    box-shadow: var(--box-shadow);
+    scale: 1.00075;
+    background: #fff;
+    border: 2px var(--red) solid;
+}
+
+.equipo .equipo-slider .box img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50px;
+}
+
+.equipo .equipo-slider .box p {
+    padding: 1rem ;
+    line-height: 1.8;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: none;
+}
+/* ESTILOS DE EQUIPO */
+
+.box {
+    position: relative;
+}
+
+.hidden {
+    display: none;
+}
+
+.parrafo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(116, 10, 10, 0.911);
+    color: #fff;
+    padding: 20px;
+    z-index: 1;
+}
+
+.equipo .equipo-slider .box h3 {
+    padding-bottom: .5rem;
+    color: var(--black);
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-transform: none;
+}
+
+.equipo .equipo-slider .box h2 {
+    padding-bottom: .5rem;
+    color: var(--green);
+    font-size: 2.2rem;
+    text-transform: none;
+}
+
+.equipo .equipo-slider .box .stars {
+    padding-bottom: .5rem;
+    color: var(--orange);
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+/* responsive nosotros */
+@media (max-width:768px) {
+    .somos {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+
+    .container {
+        display: block;
+        justify-content: end;
+        padding: 20px;
+    }
+
+    
+}
+
+@media (max-width:480px) {
+    .somos {
+        display: block;
+        justify-content: center;
+        width: 50rem;
+        flex-direction: column;
+    }
+
+    .box {
+        width: 20rem;
+    }
+
+}

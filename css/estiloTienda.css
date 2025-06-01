@@ -1,0 +1,506 @@
+
+:root {
+    --orange: #fcac33;
+    --black: #130f40;
+    --red: #e01a3c;
+    --green: #03a69e;
+
+    --ligtht-color: gray;
+    --box-shadow: .5rem 1rem rgba(0, 0, 0, .1);
+    --border: .2rem solid rgba(0, 0, 0, .1);
+    --outline: .2rem solid var(--black);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans';
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+.my-custom-popup-class {
+    max-width: 300px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+}
+
+.my-custom-title-class {
+    color: var(--red);
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin-top: -20px;
+
+}
+
+.my-custom-icon-class {
+    font-size: 6px !important;
+    /* Ajusta el tamaño del icono según tus preferencias */
+
+}
+
+.my-custom-content-class {
+    color: var(--green);
+    font-size: 16px;
+    margin-bottom: 10px;
+    background: var(--green);
+}
+
+.my-custom-button-class {
+    background-color: var(--red);
+    /* Cambia el color de fondo según tus preferencias */
+    color: #ffffff;
+    /* Cambia el color del texto según tus preferencias */
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 13px;
+}
+
+/* sucss */
+.title-class {
+    color: black;
+    /* Cambia el color del título según tus preferencias */
+    font-size: 18px;
+}
+
+.icon-class {
+    font-size: 6px;
+    /* Ajusta el tamaño del icono según tus preferencias */
+}
+
+.popup-class {
+    background-color: rgb(255, 255, 255);
+    /* Cambia el color de fondo del cuadro de la alerta según tus preferencias */
+    max-width: 25rem;
+    height: 18rem;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.content-class{
+font-size: 10px;
+}
+
+
+.header h1 {
+    text-align: center;
+    font-size: 35px;
+    /* background-color: #000; */
+    color: #000000;
+    padding: 30px 0;
+}
+
+#menu-btn {
+    display: none;
+}
+
+.shop {
+    margin-top: 3.7rem;
+}
+
+.category_list {
+    padding: 10px;
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+}
+
+.category_list .category_item {
+    padding: 5px 15px;
+
+    text-align: center;
+    text-decoration: none;
+    color: var(--black);
+    font-size: 20px;
+
+}
+
+.category_list .ct_item-active {
+    background: var(--orange);
+    border-radius: 12px;
+
+}
+
+.store-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+/* Estilos Productos */
+.products {
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 20px;
+    margin: auto;
+    justify-content: space-between;
+    /* oculto lo que queda fuera del .contenedor */
+    contain: paint;
+}
+
+/* SECCION CONTENEDOR DE ITEMS */
+.products .contenedor-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    grid-gap: 15px;
+    grid-row-gap: 15px;
+    flex: 1;
+    padding: 2rem;
+    text-transform: none;
+
+    /* border: 2px solid var(--red);
+    transition: .3s;
+    border-radius: 10px;
+    text-align: center;
+    padding: 2rem;
+    outline-offset: -1rem;
+    flex-wrap: wrap; */
+
+}
+
+
+.products .contenedor-items .item {
+    margin: auto;
+    border: 2px solid var(--ligtht-color);
+    border-radius: 10px;
+    padding: 10px;
+    transition: .3s;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+
+
+}
+.products .contenedor-items .item h3{
+    font-size: 2.5rem;
+}
+
+.products .contenedor-items .item .img-item {
+    width: 100%;
+    height:20rem;
+    border-radius: 23px;
+}
+
+.products .contenedor-items .item:hover {
+    box-shadow: 0 0 10px #eeacac;
+    scale: 1.005;
+    border: 2px solid var(--red);
+}
+
+.products .contenedor-items .item .titulo-item {
+    font-weight: bold;
+    text-align: center;
+    text-transform: none;
+    font-size: 20px;
+
+}
+
+.products .contenedor-items .item .precio-item {
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    position: relative;
+    margin-top: 5px;
+    text-transform: none;
+}
+
+.products .contenedor-items .item p {
+    font-size: 1.7rem;
+    margin-top: 5px;
+    text-transform: none;
+}
+
+
+/* Animacion del boton añadir carrito */
+.products .contenedor-items .boton-item {
+    margin: 5px auto;
+    border: none;
+    background-color: var(--red);
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 20rem;
+    left: 20px;
+    position: absolute;
+    bottom: 1.5rem;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+    font-size: 16px;
+    /* Ajusta este valor según sea necesario */
+
+}
+
+.item:hover .boton-item {
+    transform: translateY(-280%);
+    opacity: 1;
+    pointer-events: auto;
+    text-align: center;
+
+
+}
+
+
+/* seccion carrito */
+
+.header .shopping-cart {
+    position: absolute;
+    top: 110%;
+    right: -150%;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    background: #fff;
+    width: 35rem;
+
+}
+.header .button-content{
+    display: flex;
+    font-size: 2rem;
+}
+.header .shopping-cart .card-items{
+    overflow-y: auto;
+    max-height: 420px;
+}
+
+.header .shopping-cart h2 {
+    color: var(--red);
+    font-size: 25px;
+    text-align: center;
+}
+
+.header .shopping-cart .close-btn {
+    position: absolute;
+    top: -12px;
+    right: -10px;
+    cursor: pointer;
+    color: var(--green);
+    border-radius: 50%;
+    padding: 4px 5px;
+    font-size: 25px;
+}
+
+.header .shopping-cart.active {
+    right: 2rem;
+    transition: .4s linear;
+}
+
+.header .shopping-cart .box {
+    background: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 1rem 0;
+
+}
+.header .shopping-cart .box .precio-content{
+    margin:0 auto;
+
+}
+.header .shopping-cart .box .menos{
+    font-size: 12px;
+    width: 20px;
+    height: 20px;margin: 0;
+    padding: 0;
+    background: #03a69e;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.header .shopping-cart .box .mas{
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    padding: 0;margin: 0;
+    background: #03a69e;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.header .shopping-cart img {
+    height: 13rem;
+    width: 13rem;
+    border-radius: 12px;
+}
+
+.header .shopping-cart .box .fa-trash {
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    cursor: pointer;
+    color: var(--red);
+    transform: translateY(-50%);
+}
+
+.header .shopping-cart .box .fa-trash:hover {
+    color: var(--red);
+}
+
+.header .shopping-cart .box .content h3 {
+    color: var(--black);
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
+
+    /* background-color: goldenrod;
+        border-radius: 3px;
+        height: 40px;
+        padding: 10px;
+        margin-bottom: 20px;
+        color: white;
+        display: flex;
+        align-items: center;
+        font-size: 50px; */
+
+}
+
+
+.header .shopping-cart .box .content span {
+    color: var(--green);
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+
+.header .shopping-cart .box .content .quantity {
+    padding-left: 1rem;
+    color: var(--red);
+}
+
+.header .shopping-cart .total {
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    text-align: center;
+    color: #0e0d0d;
+}
+
+.header .shopping-cart .btn {
+    text-align: center;
+    margin: 1rem;
+
+}
+
+
+/* Detalles estilos  */
+
+.overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.918);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 9999;
+}
+
+.overlay p {
+    font-size: 18px;
+}
+
+.show-overlay {
+    display: block;
+}
+
+
+/* SECCION RESPONSIVE */
+@media screen and (max-width: 990px) {
+    .contenedor {
+        display: flex;
+ display: block;
+    }
+
+    .contenedor-items {
+        width: 100% !important;
+        margin: 5px;
+    }
+
+    .carrito {
+        width: 100%;
+    }
+}
+@media screen  and (max-width:768px){
+    .products .contenedor-items .boton-item {
+        margin: 5px auto;
+        border: none;
+        background-color: var(--red);
+        color: #fff;
+        padding: 5px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 20rem;
+        display: block;
+        left: 20px;
+        position: absolute;
+        bottom: 1.3rem;
+        justify-content: center;
+        text-align: center;
+        transition: transform 0.3s ease;
+        opacity: 0;
+        pointer-events: none;
+        font-size: 16px;
+        /* Ajusta este valor según sea necesario */
+    
+    }
+    
+    .item:hover .boton-item {
+        transform: translateY(-250%);
+        opacity: 1;
+        pointer-events: auto;
+        text-align: center;
+    
+    
+    }
+}
+
+@media screen  and (max-width:480px){
+    .products .contenedor-items .boton-item {
+        margin: 5px auto;
+        border: none;
+        background-color: var(--red);
+        color: #fff;
+        padding: 5px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 20rem;
+        left: 80px;
+        display: block;
+        position: absolute;
+        bottom: 1.3rem;
+        justify-content: center;
+        text-align: center;
+        transition: transform 0.3s ease;
+        opacity: 0;
+        pointer-events: none;
+        font-size: 16px;
+        /* Ajusta este valor según sea necesario */
+    
+    }
+    
+    .item:hover .boton-item {
+        transform: translateY(-250%);
+        opacity: 1;
+        pointer-events: auto;
+        text-align: center;
+    
+    
+    }
+}

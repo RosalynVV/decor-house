@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Agregar Producto</title>
+    <link rel="stylesheet" href="./css/admi.css">
+</head>
+
+<body>
+
+    <button onclick="window.location.href='tienda.html'" class="volver-btn">Volver a la Tienda</button>
+
+    <h1>Agregar Producto</h1>
+    <div>
+        <form class="productForm" id="productForm">
+            <label for="name">Nombre del producto:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="price">Precio:</label>
+            <input type="text" id="price" name="price" required>
+
+            <label for="description">Descripción:</label>
+            <input type="text" id="description" name="description" required>
+
+            <label for="image">Imagen:</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+            <img id="previewImage" src="#" alt="Vista previa de la imagen"
+                style="display: none; max-width: 200px; margin-top: 10px;">
+
+            <div class="action-buttons">
+                <input type="submit" value="Agregar Producto">
+                <button id="cancelButton" class="cancel">Cancelar</button>
+            </div>
+        </form>
+    </div>
+    <div class="product-container" id="adminProductContainer">
+        <!-- Los productos existentes se mostrarán aquí -->
+    </div>
+    
+    <h1>Tienda</h1>
+    <div class="product-container" id="productContainer">
+        <!-- aqui se mostrar los productos -->
+    </div>
+
+
+    <script src="./js/admi.js"></script>
+</body>
+
+</html>

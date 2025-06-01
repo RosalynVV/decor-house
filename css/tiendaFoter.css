@@ -1,0 +1,99 @@
+:root{
+    --orange: #fcac33 ;
+    --black: #130f40;
+    --red:#e01a3c;
+    --green:#03a69e;
+
+    --ligtht-color:gray;
+    --box-shadow: .5rem 1rem rgba(0,0,0,.1);
+    --border: .2rem solid rgba(0,0,0,.1);
+    --outline: .2rem solid var(--black);
+}
+
+.footer{
+    background: hsl(180, 6%, 10%);;
+    box-sizing: border-box;
+    font-size: 1rem;
+    width: 100%;
+}
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 2fr));
+    gap: 15px;
+}
+.footer .box-container .box-content  h3 {
+    font-size: 1.7rem;
+    color: var(--red);
+    padding: 1rem 0;
+    
+    
+}
+
+.footer .box-container .box-content  img{
+    display: flex;
+    height: 50px;
+}
+.footer .box-container .box-content .links{
+    display: block;
+    font-size: 1.5rem;
+    color: var(--green);
+    padding: 1rem 0;
+    text-transform: none;
+}
+.footer .box-container .box-content .links i{
+    color: var(--orange);
+    padding-right: .5rem;
+}
+.footer .box-container .box-content .links:hover i{
+    padding-right: 2rem;
+}
+
+.footer .box-container .box-content p{
+    line-height: 1.8;
+    font-size: 1.5rem;
+    color: var(--green);
+    padding: 1rem 0;
+    text-transform: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.footer .box-container .box-content .share a{
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    border-radius: .5rem;
+    font-size: 2.5rem;
+    color: var(--orange);
+    margin-left: .2rem;
+    text-align: center;
+}
+.footer .box-container .box-content .share  a:hover{
+    background: var(--orange);
+    color: #fff;
+}
+.footer .box-container .box-content .email{
+    width: 100%;
+    margin: .7rem 0;
+    padding: 1rem;
+    border-radius: .5rem;
+    background: #eee;
+    color: var(--black);
+    text-transform: none;
+}
+.footer .box-container .box-content .payment-img{
+    margin-top: 2rem;
+    height: 3rem;
+}
+.footer .credit{
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 2rem;
+    padding-top: 2.5rem;
+    color: var(--red);
+    border-top: var(--border);
+}
+.footer .credit span{
+    color: var(--orange);
+}
+

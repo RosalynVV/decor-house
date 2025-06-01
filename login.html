@@ -1,0 +1,150 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./LogoDH/LogoOficial.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2-modal/dist/sweetalert2-modal.min.css">
+  <link rel="stylesheet" href="./login.css">
+  <title>Login</title>
+ </head>
+ <body>
+  <main>
+   <!-- LOGIN-->
+   <section class="login-section-user" id="loginSection">
+    <header class="login-header">
+      <img src="./LogoDH/logoDH.png" width="150" alt=""><h1 class="login-title" style="margin-top: -20px; margin-bottom: -20px;">Login</h1>
+      <br>
+      <p class="login-subtitle">
+        Ingresa tus credenciales
+      </p>
+    </header>
+    <div class="container-login">
+      <form class="login-form" id="loginForm" action="/login" method="post">
+        <div class="input-group">
+          <label for="loginEmail">Correo Email</label>
+          <input
+            type="email"
+            id="loginEmail"
+            placeholder="Ingresa tu correo"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <label for="loginPassword">Contraseña</label>
+          <input
+            type="password"
+            id="loginPassword"
+            placeholder="Ingresa tu contraseña"
+            required
+          />
+        </div>
+        <button type="submit">Ingresar</button>
+        <p class="switch-text">
+          No tiene una cuenta? <a href="#" onclick="toggleForms()"
+            > Registrate aqui</a
+          >
+        </p>
+      </form>
+    </div>
+  </section>
+<br>
+  <!-- REGISTER-->
+  <section class="register-section-user hidden" id="registerSection" style="margin-top: 70px;">
+    <header class="register-header">
+      <img src="./LogoDH/logoDH.png" width="150" alt=""> <h1 class="login-title" style="margin-top: -20px; margin-bottom: -20px;">Registro</h1>
+      <p class="register-subtitle" style="margin-top: 30px;">Create a new account</p>
+    </header>
+    <div class="container-register">
+      <form class="register-form" id="registerForm" action="/register" method="post">
+        <div class="input-group">
+          <label for="registerNombres">Nombres</label>
+          <input
+            type="text"
+            id="registerNombres"
+            placeholder="Ingresa tus nombres"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="registerApellidos">Apellidos</label>
+          <input
+            type="text"
+            id="registerApellidos"
+            placeholder="Ingresa tus apellidos"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="registerUserName">Nombre de usuario</label>
+          <input
+            type="text"
+            id="registerUserName"
+            placeholder="No puede contener espacios, Ejemlo: Josu09P "
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="registerCelular">Celular</label>
+          <input
+            type="tel"
+            id="registerCelular"
+            placeholder="Ingresa tu número de celular"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="registerCiudad">Ciudad</label>
+          <input
+            type="text"
+            id="registerCiudad"
+            placeholder="Ingresa tu ciudad"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="registerEmail">Email</label>
+          <input
+            type="email"
+            id="registerEmail"
+            placeholder="Ingresa un correo"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="registerPassword">Password</label>
+          <input
+            type="password"
+            id="registerPassword"
+            placeholder="Crea una contraseña"
+            required
+          />
+        </div>
+
+        <button type="submit">Register</button>
+        <p class="switch-text">
+          Already have an account? <a href="#" onclick="toggleForms()"
+            >Login here</a
+          >
+        </p>
+      </form>
+    </div>
+  </section>
+</main>
+<br>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/main.js" type="module"></script>
+ <script>
+  function toggleForms() {
+    document.getElementById("loginSection").classList.toggle("hidden");
+   document.getElementById("registerSection").classList.toggle("hidden");
+  }
+ </script>
+ </body>
+ </html>

@@ -1,0 +1,274 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+:root {
+    --orange: #fcac33;
+    --black: #130f40;
+    --red: #e01a3c;
+    --green: #03a69e;
+}
+html,
+body, section{
+    width: 100%;
+}
+
+.home {
+    width: 100%;
+    display: flex;
+    padding-bottom: 10rem;
+    /* justify-content: center; */
+    padding: 70px 0;
+    overflow: hidden;
+}
+
+.home .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+ .home .content video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .home .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    text-align: center;
+  }
+
+
+
+.home .content .btn {
+    box-shadow: 0 0 10px var(--green);
+    /* estilo Animacion */
+
+    background-color: transparent;
+    /* transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1); */
+    transition: color 0.3s 0.1s ease-out;
+    position: relative;
+
+    align-items: center;
+    font-weight: 600;
+    text-decoration: none;
+    border: .2rem solid var(--green);
+    outline: none;
+    overflow: hidden;
+    color: white;
+
+
+    font-weight: 700;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 1.7s;
+
+}
+
+.home .content .btn:hover {
+    background: var(--green);
+}
+
+.home .content .btn:hover::before {
+    box-shadow: inset 0 0 0 10em var(--green);
+}
+
+.image img {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 300px;
+    object-fit: cover;
+}
+
+.home .content h3 {
+    color: rgb(212 35 63);
+    font-size: 3.7rem;
+
+    font-weight: 700;
+    opacity: 0;
+    animation: slideLetf 1s ease forwards;
+    animation-delay: 1s;
+    text-transform: none;
+}
+
+.home .content h3 span {
+    color: #03a69e;
+
+
+}
+
+.home .content h2 {
+    font-size: 1.5rem;
+    color: #fcac33;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideRigth 1s ease forwards;
+    animation-delay: .7s;
+
+}
+
+.home .content p {
+    color: rgb(255, 255, 255);
+    font-size: 1.7rem;
+    padding: 1rem 0;
+    line-height: 1.8rem;
+    font-weight: 700;
+    text-transform: none;
+
+    opacity: 0;
+    animation: slideRigth 1s ease forwards;
+    animation-delay: 1.3s;
+}
+
+/* Estilo de la animacion */
+
+@keyframes slideTop {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes slideLetf {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+@keyframes slideRigth {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 5;
+        transform: scale(1);
+    }
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-24px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes circleRotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Estilo Responsive */
+
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        padding:0;
+        height: auto;
+    }
+    
+
+    .home .content {
+        width: 100%;
+    }
+
+    .home .content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home .content h2 {
+        font-size: 1.8rem;
+    }
+
+    .home .content p {
+        font-size: 1.4rem;
+    }
+
+    .home .content .btn {
+        font-size: 1.4rem;
+    }
+
+    .home .content .image img {
+        top: 10px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .home {
+        padding-top: 10rem;
+        padding-bottom: 5rem;
+    }
+
+    .home .content h3 {
+        font-size: 2rem;
+    }
+
+    .home .content h2 {
+        font-size: 1.5rem;
+    }
+
+    .home .content p {
+        font-size: 1.2rem;
+    }
+
+    .home .content .btn {
+        font-size: 1.2rem;
+    }
+}

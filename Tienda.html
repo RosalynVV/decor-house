@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/confirmacion.css">
+    <!--Estilo de Swiper-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!--Scrip de los silder en productos-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="icon" href="./LogoDH/LogoOficial.ico">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/servicios.css">
+    <link rel="stylesheet" href="./css/tiendaFoter.css">
+    <link rel="stylesheet" href="./css/estiloTienda.css">
+    <link rel="stylesheet" href="./css/EstiloHeader.css">
+    <title>Decor House</title>
+    <!--Estilo de Swiper-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+    <!--Header section inicio-->
+    <header class="header ">
+        <a href="./index.html#" class="Logo">
+            <img src="./LogoDH/LogoOficial.png">
+        </a>
+        <nav class="navbar ">
+            <a href="index.html" style="--i:1;" class="active">Inicio</a>
+            <a href="#shop" style="--i:2;">Tienda</a>
+            <a href="index.html#servicios" style="--i:3;">Servicios</a>
+            <a href="index.html#blogs" style="--i:4;">Blog</a>
+            <a href="index.html#nosotros" style="--i:5;">Nosotros</a>
+            <a href="index.html#equipo" style="--i:6;">Equipo</a>
+            <a href="#footer" style="--i:7;">Contactos</a>
+        </nav>
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fa-solid fa-cart-shopping" id="cart-btn">
+                <span class="count-product">0</span>
+            </div>
+            <div class="fas fa-user" id="login-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" id="search" placeholder="search here...">
+            <label for="search-box" id="search-icon" class="fas fa-search"></label>
+        </form>
+        <!--Inicio del carrito de Compras -->
+        <div class="shopping-cart" id="shopping-cart">
+            <a class="close-btn" onclick="closeBtn()"><i class="far fa-times-circle"></i></a>
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+            <div class="card-items">
+            </div>
+
+            <h2>Total:S/. <strong class="price-total">0.00</strong></h2>
+
+            <div class="button-content">
+                <a href="#" class="btn" id="procesarCompra">Finalizar compra</a>
+                <a href="#" class="btn" id="vaciarCarrito">Vaciar carrito</a>
+                
+            </div>
+        </div>
+
+         <!--LOGIN -->
+         <div action="" class="login-form">
+            <div class="container-login">
+              <h3 class="title-header-login" style="color: rgb(27, 138, 183);">
+                ----- Cliente -----
+              </h3>
+          
+              <div class="use-name">
+                <p class="nav-link" style="color: #2c3e53 !important;">
+                  <strong style="font-size: 13px;">Nombre de Usuario:</strong> <span id="user-name"></span>
+                </p>
+              </div>
+          
+              <br>
+              <div class="user-logout">
+                <a href="#" class="nav-link">
+                  <i class="fas fa-door-open" id="cerrar-sesion" style="color: orange; font-size: 16px;"></i>
+                </a>
+              </div>
+              <br>
+              <p class="explanation" style="font-size: 10px; color: rgb(27, 138, 183);">
+                Si sale como "Invitado" ¡Usted no está logeado!
+              </p>
+            </div>
+    </header>
+
+    <section class="shop" id="shop">
+        <h1 class="heading">nuestros<span> productos</span></h1>
+
+        <div class="store-wrapper">
+            <div class="category_list">
+                <a href="#" class="category_item" category="all">Todo</a>
+                <a href="#" class="category_item" category="mesas">Mesas</a>
+                <a href="#" class="category_item" category="sillas">Sillas</a>
+                <!-- <a href="#" class="category_item" category="sofas">Sofas</a> -->
+            </div>
+
+
+            <section class="products" id="products">
+                <!-- ? Contenedor de elementos -->
+                <div class="contenedor-items" id="productContainer">
+                    <div class="item" category="sillas">
+                        <span class="titulo-item">Silla EcoGoma</span>
+                        <img src="./imagens_Productos/SillaBlancaD.png" alt="" class="img-item">
+                        <h3>S/.<span class="precio-item">30.00</span></h3>
+                        <button href="#" data-id="1" class="boton-item">Agregar al Carrito</button>
+                        <button href="#" data-id="30" class="btn" onclick="mostrarDetalles(this)">Detalles</button>
+                        <div id="detalles-overlay" class="overlay">
+                            <p>
+                                Silla circular que tiene un aspecto distintivo
+                                y moderno. Esta forma permite que se pueda utilizar en diferentes entornos, como
+                                espacios de
+                                trabajo o áreas de descanso.
+                            </p>
+                            <button onclick="ocultarDetalles(this)" class="btn">OK</button>
+                        </div>
+
+                    </div>
+
+                    <div class="item" category="mesas">
+                        <span class="titulo-item">Mesa RenovaLlanta</span>
+                        <img src="./imagens_Productos/MesaDecor.png" alt="" class="img-item">
+                        <h3>S/.<span class="precio-item">24.99</span></h3>
+                        <button href="#" data-id="2" class="boton-item">Agregar al Carrito</button>
+                        <button href="#" data-id="30" class="btn" onclick="mostrarDetalles(this)">Detalles</button>
+                        <div id="detalles-overlay" class="overlay">
+                            <p>
+                                Mesa hecho a base de llantas
+                                renovables, esta mesa redonda cuenta con un tapizado
+                                suave en su superficie. Puedes utilizarlo en cualquierparte de tu hogar.
+                            </p>
+                            <button onclick="ocultarDetalles(this)" class="btn">OK</button>
+                        </div>
+                    </div>
+
+                    <div class="item" category="sillas">
+                        <span class="titulo-item">Silla EcoRueda</span>
+                        <img src="./imagens_Productos/SillaModerna.png" alt="" class="img-item">
+                        <h3>S/.<span class="precio-item">21.99</span></h3>
+                        <button href="#" data-id="3" class="boton-item">Agregar al Carrito</button>
+                        <button href="#" data-id="30" class="btn" onclick="mostrarDetalles(this)">Detalles</button>
+                        <div id="detalles-overlay" class="overlay">
+                            <p>Combinación, la sostenibilidad con un estilo
+                                moderno y elegante,ideal para cualquier espacio
+                                consciente del medio ambiente. Adapatable a cualquier parte de tu hogar</p>
+                            <button onclick="ocultarDetalles(this)" class="btn">OK</button>
+                        </div>
+                    </div>
+                    <div class="item" category="sillas">
+                        <span class="titulo-item">Silla Neumático </span>
+                        <img src="./imagens_Productos/Silla.png" alt="" class="img-item">
+                        <h3>S/.<span class="precio-item">12.99</span></h3>
+                        <button href="#" data-id="4" class="boton-item">Agregar al Carrito</button>
+                        <button href="#" data-id="30" class="btn" onclick="mostrarDetalles(this)">Detalles</button>
+                        <div id="detalles-overlay" class="overlay">
+                            <p>fabricada con materiales reciclados y está diseñada para
+                                proporcionar un asiento ergonómico y confortable, con un respaldo que se adapta a la
+                                forma del cuerpo y una base estable.
+                            </p>
+                            <button onclick="ocultarDetalles(this)" class="btn">OK</button>
+                        </div>
+                    </div>
+                    <div class="item" category="sillas">
+                        <span class="titulo-item">Silla RenovaLlanta </span>
+                        <img src="./imagens_Productos/SillaDecor.png" alt="" class="img-item">
+                        <h3>S/.<span class="precio-item">32.50</span></h3>
+                        <button href="#" data-id="5" class="boton-item">Agregar al Carrito</button>
+                        <button href="#" data-id="30" class="btn" onclick="mostrarDetalles(this)">Detalles</button>
+                        <div id="detalles-overlay" class="overlay">
+                            <p>Silla con una estructura resistente y
+                                duradera,
+                                junto con su aspecto atractivo, la convierten
+                                en una opción
+                                ideal para espacios sostenibles y sofisticados
+                            </p>
+                            <button onclick="ocultarDetalles(this)" class="btn">OK</button>
+                        </div>
+
+
+                    </div>
+                    <div class="item" category="mesas">
+                        <span class="titulo-item">Mesa Conjunto </span>
+                        <img src="./imagens_Productos/Mesas.jpeg" alt="" class="img-item">
+                        <h3>S/.<span class="precio-item">39.99</span></h3>
+                        <button href="#" data-id="7" class="boton-item">Agregar al Carrito</button>
+                        <button href="#" data-id="30" class="btn" onclick="mostrarDetalles(this)">Detalles</button>
+                        <div id="detalles-overlay" class="overlay">
+                            <p> Ideal para crear áreas de reunión o
+                                espacios de
+                                comedor, este conjunto combina la
+                                sostenibilidad con la practicidad y el estilo
+                            </p>
+                            <button onclick="ocultarDetalles(this)" class="btn">OK</button>
+                        </div>
+                    </div>
+
+
+                    <div class="item" category="mesas">
+                        <span class="titulo-item">Mesa RenovaGoma</span>
+                        <img src="./imagens_Productos/MesaFamiliar.png" alt="" class="img-item">
+                        <h3>S/.<span class="precio-item">13.99</span></h3>
+                        <button href="#" data-id="8" class="boton-item">Agregar al Carrito</button>
+                        <button href="#" data-id="30" class="btn" onclick="mostrarDetalles(this)">Detalles</button>
+                        <div id="detalles-overlay" class="overlay">
+                            <p>Esta mesa redonda presenta un tapizado suave
+                                y
+                                confortable. Su aspecto moderno y ecológico la
+                                convierte en una opción ideal para espacios comprometidos con la sostenibilidad.
+                            </p>
+                            <button onclick="ocultarDetalles(this)" class="btn">OK</button>
+                        </div>
+
+                    </div>
+                    <div class="item" category="mesas">
+                        <span class="titulo-item">Mesa Tapizada</span>
+                        <img src="./imagens_Productos/imagenMesaModerna.png" alt="" class="img-item">
+                        <h3>S/.<span class="precio-item">20.80</span></h3>
+                        <button href="#" data-id="9" class="boton-item">Agregar al Carrito</button>
+                        <button href="#" data-id="30" class="btn" onclick="mostrarDetalles(this)">Detalles</button>
+                        <div id="detalles-overlay" class="overlay">
+                            <p>Elaborada con materiales sostenibles
+                                provenientes de llantas renovables, cuenta con un
+                                tapizado acogedor. Su diseño versátil y duradero la convierte en el complemento perfecto
+                                para reuniones
+                            </p>
+                            <button onclick="ocultarDetalles(this)" class="btn">OK</button>
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section class="footer" id="footer">
+        <div class="box-container">
+            <div class="box-content">
+
+                <img src="./LogoDH/LogoOficial.png" alt="">
+
+
+                <p> Gracias por prefirnos, estamos contentos de poder tener clientes como uds.
+                    disfrute de cada compra y experiencia unica, y tambien nos puedes seguir en nuestras redes sociales.
+                </p>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+            <div class="box-content">
+                <h3>Informacion de Contactos </i></h3>
+                <a href="#" class="links"> <i class="fas fa-phone"></i> +51 963058314</a>
+                <a href="#" class="links"> <i class="fas fa-envelope"></i> decorhouseshop@gmail.com</a>
+                <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i> numbai, tarapoto 4251</a>
+            </div>
+
+            <div class="box-content">
+                <h3>enlaces rápidos</h3>
+                <a href="index.html" class="links"> <i class="fas fa-arrow-right"></i> Inicio</a>
+                <a href="#shop" class="links"> <i class="fas fa-arrow-right"></i> Tienda</a>
+                <a href="index.html#servicios" class="links"> <i class="fas fa-arrow-right"></i> Servicios</a>
+                <a href="index.html#blogs" class="links"> <i class="fas fa-arrow-right"></i> Blog</a>
+                <a href="index.html#nosotros" class="links"> <i class="fas fa-arrow-right"></i> Nosotros</a>
+                <a href="index.html#equipo" class="links"> <i class="fas fa-arrow-right"></i> Equipo</a>
+                <a href="#footer" class="links"> <i class="fas fa-arrow-right"></i> Contactos</a>
+            </div>
+
+            <div class="box-content">
+                <h3>Boletín Informativo</h3>
+                <p>Ingrese su correo para recibir las nuevas actualizaciones</p>
+                <input type="email" placeholder="Su correo electrónico" id="email-input" class="email">
+                <input type="Submit" value="Enviar" class="btn" onclick="validarCorreo()">
+            </div>
+
+        </div>
+        <div class="credit">| @ Decor House</div>
+    </section>
+
+    <script src="./js/Script.js"></script>
+    <script src="./js/filtro.js"></script>
+    <script src="./js/tienda.js"></script>
+    <script src="./js/guardar.js"></script>
+    <script src="./js/admi.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.all.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const cerrarSesionBtn = document.getElementById("cerrar-sesion");
+          const userNameElement = document.getElementById("user-name");
+          const userDataString = localStorage.getItem("user");
+      
+          if (userDataString) {
+            try {
+              const user = JSON.parse(userDataString);
+              userNameElement.textContent = user.username || "Invitado";
+            } catch (error) {
+              console.error("Error al parsear user:", error);
+              userNameElement.textContent = "Invitado";
+            }
+          } else {
+            userNameElement.textContent = "Invitado";
+          }
+      
+          cerrarSesionBtn.addEventListener("click", function (event) {
+            event.preventDefault();
+      
+            if (!userDataString) {
+              Swal.fire({
+                title: "No hay usuario logueado",
+                text: "¿Deseas ir a la página de inicio de sesión?",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonText: "Sí, ir al login",
+                cancelButtonText: "No",
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  window.location.href = "./login.html";
+                }
+              });
+            } else {
+              Swal.fire({
+                title: "¿Cerrar sesión?",
+                text: "Hay un usuario logueado. ¿Deseas cerrar sesión?",
+                icon: "question",
+                showCancelButton: true,
+                confirmButtonText: "Sí",
+                cancelButtonText: "No",
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  localStorage.removeItem("user"); // DELETE DATA USER OF LOCALSTORAGE
+                  Swal.fire({
+                    title: "Sesión cerrada",
+                    text: "Has cerrado sesión exitosamente",
+                    icon: "success",
+                    confirmButtonText: "OK",
+                  }).then(() => {
+                    window.location.href = "./login.html";
+                  });
+                }
+              });
+            }
+          });
+        });
+    </script>
+
+</body>
+
+</html>

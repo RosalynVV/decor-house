@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Decor House</title>
+    <link rel="icon" href="./LogoDH/LogoOficial.ico">
+    <!--Estilo de Swiper-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="stylesheet" href="./css/equipo.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/servicios.css">
+    <link rel="stylesheet" href="./css/blogs y whatsapp.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/estiloTienda.css">
+    <link rel="stylesheet" href="./css/EstiloHeader.css">
+</head>
+
+<body>
+    <!--Header section inicio-->
+    <header class="header ">
+        <a href="#" class="Logo"><img src="./LogoDH/LogoOficial.ico" alt=""></a>
+        <nav class="navbar">
+            <a href="#home" style="--i:1;" class=" active">Inicio</a>
+            <a href="./Tienda.html" style="--i:2;">Tienda</a>
+            <a href="#servicios" style="--i:3;">Servicios</a>
+            <a href="#blogs" style="--i:4;">Blog</a>
+            <a href="#nosotros" style="--i:5;">Nosotros</a>
+            <a href="#equipo" style="--i:6;">Equipo</a>
+            <a href="#footer" style="--i:7;">Contactos</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fa-solid fa-cart-shopping" id="cart-btn">
+                <span class="count-product">0</span>
+            </div>
+            <div class="fas fa-user" id="login-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" id="search-icon" class="fas fa-search"></label>
+        </form>
+
+        <!--Inicio del carrito de Compras -->
+        <div class="shopping-cart" id="shopping-cart">
+            <a class="close-btn" onclick="closeBtn()"><i class="far fa-times-circle"></i></a>
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+            <div class="card-items">
+            </div>
+            <h2>Total: <strong class="price-total">0.00</strong></h2>
+            <a href="/compras.html" class="btn" id="procesarCompra">Ir a comprar</a>
+        </div>
+
+        <!--LOGIN -->
+        <div action="" class="login-form">
+            <div class="container-login">
+              <h3 class="title-header-login" style="color: rgb(27, 138, 183);">
+                ----- Cliente -----
+              </h3>
+          
+              <div class="use-name">
+                <p class="nav-link" style="color: #2c3e53 !important;">
+                  <strong style="font-size: 13px;">Nombre de Usuario:</strong> <span id="user-name"></span>
+                </p>
+              </div>
+          
+              <br>
+              <div class="user-logout">
+                <a href="#" class="nav-link">
+                  <i class="fas fa-door-open" id="cerrar-sesion" style="color: orange; font-size: 16px;"></i>
+                </a>
+              </div>
+              <br>
+              <p class="explanation" style="font-size: 10px; color: rgb(27, 138, 183);">
+                Si sale como "Invitado" ¡Usted no está logeado!
+              </p>
+            </div>
+          </div>
+          
+    </header>
+
+    <!--Home section inicial-->
+    <section class="home" id="home">
+        <div class="content ">
+            <video id="videoPlayer" src="./ImgHome/FINAL.mp4" autoplay loop></video>
+            <div class="text-overlay">
+                <h3><span>DECOR </span>HOUSE</h3>
+                <h2>"DISEÑO-INNOVACIÓN-CALIDAD"</h2>
+                <p>Queremos que tu experiencia de compra
+                    sea tan placentera como nuestros productos.
+                </p>
+                <a href="./Tienda.html" class="btn"> Comprar ahora</a>
+            </div>
+        </div>
+        <!-- icono del whatsapp -->
+        <a href="https://wa.me/921640803?text=Hola%20quiero%20hablar%20contigo%20sobre%20un%20pedido" class="btn-whatsapp" target="_blank">
+            <i class="fab fa-whatsapp" alt="Contactar por whatsapp"></i>
+        </a>
+    </section>
+    
+    <!--=======Seccion de productos inico==========-->
+    <secction class="servicios" id="servicios">
+        <h1 class="heading">Nuestros <span>Servicios</span></h1>
+        <div class="swiper servicios-slider">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+                    <h3 class="title-prod">Delivery</h3>
+                    <div class="content">
+                        <img src="./imgServicios/delivery.jpg" alt="">
+
+                    </div>
+                    <h5>
+                        Entrega rápida y conveniente de productos
+                        a domicilio, sin necesidad de salir de
+                        casa.
+                    </h5>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn leer-mas" data-id="1">Leer más</a>
+                    <div class="detalles-servicio" id="detalles-1" style="display: none;">
+                        <h4>Detalles del servicio de Delivery</h4>
+                        <p>
+                            "Entrega rápida y segura a tu puerta
+                            En Decor House, te ofrecemos una entrega eficiente y confiable.
+                            Cobertura amplia en tarapoto, san martin y todo el perú.
+                            Opciones de envío estándar y expréss.
+                            Seguimiento de envíos en tiempo real.
+                            Política de devolución justa.
+                            Equipo de atención al cliente disponible. ¡Confía en nosotros para una experiencia de
+                            entrega excepcional!"
+                        </p>
+                        <button href="#" class="btn">ok</button>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <h3 class="title-prod">Métodos de pago</h3>
+                    <div class="content">
+                        <img src="./imgServicios/metodo_de_pago.jpeg" alt="">
+                    </div>
+                    <h5>
+                        Pagos seguros y flexibles para mayor comodidad.
+                    </h5>
+
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn leer-mas" data-id="2">Leer más</a>
+                    <div class="detalles-servicio" id="detalles-2" style="display: none;">
+                        <h4>Detalles del servicio Métodos de pago</h4>
+                        <p>
+                            En Decor House, ofrecemos diversos métodos de pago seguros y convenientes. Aceptamos
+                            tarjetas de crédito, transferencias bancarias, pagos en efectivo y aplicaciones móviles.
+                            Garantizamos la confidencialidad de tus datos mediante medidas de seguridad avanzadas.
+                            Brindamos opciones flexibles y confiables para facilitar tus transacciones.
+                        </p>
+                        <button href="#" class="btn">ok</button>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <h3 class="title-prod">Personalización</h3>
+                    <div class="content">
+                        <img src="./imgServicios/personalizacion.jpg" alt="">
+                    </div>
+                    <h5>Personaliza tus productos según tus gustos y
+                        estilos.
+                    </h5>
+
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn leer-mas" data-id="3">Leer más</a>
+                    <div class="detalles-servicio" id="detalles-3" style="display: none;">
+                        <h4>Detalles del servicio Personalización</h4>
+                        <p>
+
+                            Personalización de productos según tus preferencias y necesidades en Decor House. Amplia
+                            variedad de opciones, desde colores y tamaños hasta diseños especiales. Nuestro equipo de
+                            expertos garantiza productos únicos y de alta calidad. Convierte tus ideas en productos
+                            personalizados excepcionales con nuestra confiable colaboración.
+                        </p>
+                        <button href="#" class="btn">ok</button>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <h3 class="title-prod">Asesoramiento de diseño</h3>
+                    <div class="content">
+                        <img src="./imgServicios/Asesoramiento.jpg" alt="">
+                    </div>
+                    <h5>
+                        Asesoramiento personalizado para crear el ambiente perfecto.
+                    </h5>
+
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn leer-mas" data-id="5">Leer más</a>
+                    <div class="detalles-servicio" id="detalles-5" style="display: none;">
+                        <h4>Detalles del servicio de Asesoramiento de diseño</h4>
+                        <p>
+                            Asesoramiento en diseño de muebles para espacios únicos y funcionales. Orientación en
+                            estilos, materiales y colores. Transforma tu hogar con ideas inspiradoras y soluciones
+                            personalizadas. Confía en nuestro expertise para crear lugares excepcionales.
+                        </p>
+                        <button href="#" class="btn">ok</button>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <h3 class="title-prod">Comercio electrónico</h3>
+                    <div class="content">
+                        <img src="./imgServicios/Ecommerce.jpg" alt="">
+                    </div>
+                    <h5>
+                        Compra de forma rápida y segura en nuestra plataforma en línea.
+                    </h5>
+
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn leer-mas" data-id="6">Leer más</a>
+                    <div class="detalles-servicio" id="detalles-6" style="display: none;">
+                        <h4>Detalles del servicio Comercio electronico</h4>
+                        <p>
+                            Descubre la comodidad de comprar en línea las 24/7 en Decor House. Amplia selección de
+                            productos, seguridad en el pago y entrega a domicilio. Asistencia al cliente disponible en
+                            todo momento.¡Descubre la comodidad de hacer tus compras en línea!
+                        </p>
+                        <button href="#" class="btn">ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </secction>
+
+    <!--======BLOGS de la secciones INICIO===========-->
+    <section class="blogs" id="blogs">
+        <div class="blog-heading">
+            <h1 class="heading">Nuestros <span>Blogs</span></h1>
+            <h2>Mis publicaciones recientes</h2>
+        </div>
+
+        <div class="swiper box-container">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+                    <img src="./imgBlog/consejos-estilos.jpg" alt="">
+                    <div class="content">
+                        <div class="icons">
+                            <a href="#"><i class="fas fa-user"> </i>Por Usuario</a>
+                            <a href="#"><i class="fas fa-calendar"> </i>1st may, 2023</a>
+                        </div>
+                        <h3>Consejos de estilo y decoración</h3>
+                        <p>Consejos de estilo y decoración: Crea espacios inspiradores con nuestros expertos.</p>
+                        <a href="#" class="btn leer-mas" data-id="15">Leer más</a>
+                        <div class="detalles-servicio" id="detalles-15" style="display: none;">
+                            <h4>Los 5 Mejores Consejos</h4>
+                            <ul>
+                                <li>Estilo moderno: Líneas limpias y formas geométricas con sillas y mesas que
+                                    incorporan llantas renovables para un aspecto moderno y sostenible.</li>
+                                <li>Estilo rústico: Sillas y mesas de madera con acabado envejecido, combinadas con
+                                    llantas renovables, brindan un encanto rústico y ecológico</li>
+                                <li>Estilo escandinavo: Sillas y mesas de diseño minimalista con llantas renovables, en
+                                    tonos claros y materiales naturales, para lograr un ambiente escandinavo sostenible.
+                                </li>
+                                <li>Estilo escandinavo: Simple y funcional, elige sillas y mesas con acabados en llantas
+                                    recicladas y colores claros para un ambiente escandinavo sostenible.</li>
+                                <li>Estilo vintage: Encanto del pasado con muebles retro o de época con toques de
+                                    llantas recicladas, añadiendo autenticidad y conciencia ecológica</li>
+                                    <li> El servicio que se esta ofreciendo en esta empresa es de la venta de muebles
+                                        hechos a base de llantas que usadas que han sido recicladas para la elaboracion
+                                        de estos productos que ayudan con la reduccion de la basura producida por las 
+                                        llantas usadas
+                                    </li>
+                            </ul>
+                            <button href="#" class="btn">ok</button>
+                        
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="./imgBlog/tendencia.jpg" alt="">
+                    <div class="content">
+                        <div class="icons">
+                            <a href="#"><i class="fas fa-user"> </i>Por Usuario</a>
+                            <a href="#"><i class="fas fa-calendar"> </i>1st may, 2023</a>
+                        </div>
+                        <h3>Tendencias y novedades</h3>
+                        <p>Las últimas tendencias y novedades en muebles:
+                            Descubre lo más actual en decoración.</p>
+                        <a href="#" class="btn leer-mas" data-id="16">Leer más</a>
+                        <div class="detalles-servicio" id="detalles-16" style="display: none;">
+                            <h4>Tendencias y novedades</h4>
+                            <ul>
+                                <li>Estilo minimalista: Diseño limpio y simple, ideal para crear un ambiente moderno y
+                                    funcional en tu espacio con muebles hechos a base de llantas renovables.</li>
+                                <li>Materiales naturales: Utilización de materiales sostenibles y amigables con el medio
+                                    ambiente.
+                                </li>
+                                <li>Sillas ergonómicas - Incorporación de sillas diseñadas para proporcionar
+                                    comodidad y apoyo adecuado al cuerpo, promoviendo una postura saludable durante las
+                                    horas de uso.</li>
+                                <li>Mesas extensibles - Diseño versátil que permite ajustar el tamaño de la
+                                    mesa según las necesidades, ideal para adaptarse a diferentes ocasiones y espacios.
+                                </li>
+                                <li>Diseños ergonómicos: Incorporación de características ergonómicas en sillas y mesas
+                                    con llantas renovables para brindar mayor comodidad y apoyo postural.</li>
+                            </ul>
+                            <button href="#" class="btn">ok</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="./imgBlog/lista.jpg" alt="">
+                    <div class="content">
+                        <div class="icons">
+                            <a href="#"><i class="fas fa-user"> </i>Por Usuario</a>
+                            <a href="#"><i class="fas fa-calendar"> </i>1st may, 2023</a>
+                        </div>
+                        <h3>Productos más vendidos</h3>
+                        <p>Descubre los favoritos de nuestros clientes: Los muebles más populares que transformarán tu
+                            hogar.</p>
+                        <a href="#" class="btn leer-mas" data-id="17">Leer más</a>
+                        <div class="detalles-servicio" id="detalles-17" style="display: none;">
+                            <h4>Productos más vendidos</h4>
+                            <ul>
+                                <li> Conjunto de Mesa de Comedor y Sillas de Estilo Moderno</li>
+                                <li> Juego de Mesa y Sillas de Comedor de Madera Maciza </li>
+                                <li> Conjunto de Mesa y Sillas de Comedor de Diseño Escandinavo </li>
+                                <li> Mesa de Comedor Extensible con Sillas Tapizadas </li>
+                                <li> Conjunto de Mesa y Sillas de Comedor de Vidrio Templado y Meta </li>
+                            </ul>
+                            <button href="#" class="btn">ok</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--======Nosotros de la secciones INICIO===========-->
+    <section class="nosotros" id="nosotros">
+        <h1 class="heading">Sobre<span>nosotros</span></h1>
+        <div class="box-nosotros">
+            <div class="contenido">
+                <div class="somos">
+                    <div class="description">
+                        <h2>¿Quiénes Somos?</h2>
+                        <p>
+                            Decor House es una empresa dedicada a brindar servicios para el hogar que fue fundada
+                            por una familia de emprendedores que unieron la experiencia y la juventud para crear la
+                            base de un equipo innovador y dinámico con visión global. Esencialmente motivamos a
+                            mejorar la calidad de vida de las personas permitiéndoles acceder a los mejores
+                            productos en la línea de mueblería.
+                        </p>
+                    </div>
+                    <div class="imagen">
+                        <img src="./imgBlog/Equipo.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="mision-container">
+                        <h2>Misión</h2>
+                        <p>
+                            Somos una empresa, que dedicada a crear productos innovadores, y sostenibles que ayudan a
+                            reducir la cantidad de llantas que se descartan para promover la cultura del reciclaje.
+                        </p>
+                    </div>
+                    <div class="vision-container">
+                        <h2>Visión</h2>
+                        <p>
+                            Ser reconocida como líderes en el diseño y fabricación de muebles innovadores y ecológicos,
+                            que
+                            combinen el uso de llantas recicladas con materiales de alta calidad.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--======PIE de la PAGINA INICIO===========-->
+    <section class="footer" id="footer">
+        <div class="box-container">
+            <div class="box">
+                <img src="./LogoDH/LogoOficial.png" alt="">
+                <p>Gracias por prefirnos, estamos contentos de poder tener clientes como uds.
+                    disfrute de cada compra y experiencia unica, y tambien nos puedes seguir en nuestras redes sociales.
+                </p>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>Informacion de Contactos </i></h3>
+                <a href="#" class="links"> <i class="fas fa-phone"></i> +51 987659324</a>
+                <a href="#" class="links"> <i class="fas fa-envelope"></i> decorhouseshop@gmail.com</a>
+                <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i> numbai, tarapoto 4251</a>
+            </div>
+
+            <div class="box">
+                <h3>Enlaces rápidos</h3>
+                <a href="#" class="links"> <i class="fas fa-arrow-right"></i> Inicio</a>
+                <a href="./Tienda.html" class="links"> <i class="fas fa-arrow-right"></i> Tienda</a>
+                <a href="#servicios" class="links"> <i class="fas fa-arrow-right"></i> Servicios</a>
+                <a href="#blogs" class="links"> <i class="fas fa-arrow-right"></i> Blog</a>
+                <a href="#nosotros" class="links"> <i class="fas fa-arrow-right"></i> Nosotros</a>
+                <a href="#equipo" class="links"> <i class="fas fa-arrow-right"></i> Equipo</a>
+                <a href="#footer" class="links"> <i class="fas fa-arrow-right"></i> Contactos</a>
+            </div>
+
+            <div class="box">
+                <h3>Boletín Informativo</h3>
+                <p>Ingrese su correo para recibir las nuevas actualizaciones</p>
+                <input type="email" placeholder="Su correo electrónico" id="email-input" class="email">
+                <input type="Submit" value="Enviar" class="btn" onclick="validarCorreo()">
+            </div>
+        </div>
+        <div class="credit">| @ Decor House</div>
+    </section>
+    <!--======PIE de la PAGINA FIN===========-->
+
+
+    <!--Scrip de los silder en iconos fontawesone-->
+    <script src="https://kit.fontawesome.com/32461f1a4d.js" crossorigin="anonymous"></script>
+    <!-- <script src="/js/header.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--Scrip de los silder en productos-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script src="./js/servicio.js"></script>
+    <script src="./js/Script.js"></script>
+    <script src="./js/tienda.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const cerrarSesionBtn = document.getElementById("cerrar-sesion");
+          const userNameElement = document.getElementById("user-name");
+          const userDataString = localStorage.getItem("user");
+      
+          if (userDataString) {
+            try {
+              const user = JSON.parse(userDataString);
+              userNameElement.textContent = user.username || "Invitado";
+            } catch (error) {
+              console.error("Error al parsear user:", error);
+              userNameElement.textContent = "Invitado";
+            }
+          } else {
+            userNameElement.textContent = "Invitado";
+          }
+      
+          cerrarSesionBtn.addEventListener("click", function (event) {
+            event.preventDefault();
+      
+            if (!userDataString) {
+              Swal.fire({
+                title: "No hay usuario logueado",
+                text: "¿Deseas ir a la página de inicio de sesión?",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonText: "Sí, ir al login",
+                cancelButtonText: "No",
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  window.location.href = "./login.html";
+                }
+              });
+            } else {
+              Swal.fire({
+                title: "¿Cerrar sesión?",
+                text: "Hay un usuario logueado. ¿Deseas cerrar sesión?",
+                icon: "question",
+                showCancelButton: true,
+                confirmButtonText: "Sí",
+                cancelButtonText: "No",
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  localStorage.removeItem("user"); // DELETE DATA USER OF LOCALSTORAGE
+                  Swal.fire({
+                    title: "Sesión cerrada",
+                    text: "Has cerrado sesión exitosamente",
+                    icon: "success",
+                    confirmButtonText: "OK",
+                  }).then(() => {
+                    window.location.href = "./login.html";
+                  });
+                }
+              });
+            }
+          });
+        });
+    </script>
+      
+</body>
+
+</html>

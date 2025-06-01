@@ -1,0 +1,156 @@
+:root {
+    --orange: #fcac33;
+    --black: #130f40;
+    --red: #e01a3c;
+    --green: #03a69e;
+}
+
+.box {
+    position: relative;
+
+}
+
+.heading {
+    text-align: center;
+    padding: 1rem 0;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    color: var(--black);
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+.heading span {
+    background: var(--green);
+    color: #fff;
+    display: inline-block;
+    padding: .5rem 3rem;
+    text-transform: uppercase;
+    clip-path: polygon(100% 0, 93% 50%,
+            86% 99%, 0 100%, 7% 47%, 13% 0);
+}
+
+.box .detalles-servicio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 22, 22, 0.9);
+    text-align: center;
+    padding: 20px;
+    font-size: 15px;
+    opacity: 0;
+    transition: opacity 0.3s, top 0.5s;
+    display: block;
+}
+
+.box:hover .detalles-servicio {
+    opacity: 1;
+    top: 0;
+    transition: opacity 0.3s, top 0.5s;
+
+}
+
+.box .detalles-servicio h4 {
+    color: var(--red);
+    font-size: 20px;
+    transition: opacity 0.3s, top 0.5s;
+
+}
+
+.box .detalles-servicio p {
+    font-weight: bolder;
+    color: #fff;
+    text-align: justify;
+    font-size: 14px;
+    animation: slide-down 0.5s forwards;
+    text-transform: none;
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.servicios .servicios-slider {
+    padding: 1rem;
+    width: 75%;
+    height: 20%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 20px;
+    padding: 10px;
+    margin: 0 auto;
+    justify-content: space-between;
+    /* oculto lo que queda fuera del .contenedor */
+    contain: paint;
+    justify-content: flex-start;
+
+}
+
+.servicios .servicios-slider:first-child {
+    margin-bottom: 2rem;
+}
+
+.servicios .servicios-slider .box {
+    /* max-width: 200px; */
+    margin: auto;
+    border: 1px solid #e01a3c;
+    transition: .3s;
+    border-radius: 10px;
+    text-align: center;
+    padding: 3rem 2rem;
+    outline-offset: 1rem;
+    justify-content: flex-start;
+}
+
+.servicios .servicios-slider .box:hover {
+    box-shadow: 0 0 3px var(--red);
+    scale: 1.0075;
+    background: #fff;
+}
+
+.servicios .servicios-slider .swiper-wrapper .box .content img {
+    height: 20rem;
+    width: 25rem;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.servicios .servicios-slider .box h3 {
+    font-size: 1.7rem;
+    color: var(--orange);
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.servicios .servicios-slider .swiper-wrapper .box h5 {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--black);
+    text-transform: none;
+}
+
+
+
+.servicios .servicios-slider .box .stars i {
+    font-size: 1.7rem;
+    color: var(--orange);
+    padding: .5rem 0;
+}
+
+
+
