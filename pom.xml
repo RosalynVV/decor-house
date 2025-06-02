@@ -101,9 +101,5 @@
 			</plugin>
 		</plugins>
 	</build>
-
-<<<<<<< HEAD
-  <name>decor-house</name>
-=======
->>>>>>> d382387478529ab13419149f7f54b7423fb93eb3
+	
 </project>
